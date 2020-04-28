@@ -1,0 +1,40 @@
+@import './variables';
+@import './fonts';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: $white;
+  * {
+    color: $blue;
+  }
+  font-family: 'Montserrat';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Futura';
+}
+
+*:focus,
+*:active,
+*:active:focus {
+  outline: none;
+}
+
+*::selection,
+*::-moz-selection {
+  background: $blue;
+  color: $white;
+}

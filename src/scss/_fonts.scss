@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100&display=swap');
+@font-face {
+  font-family: 'Bison';
+  src: local('Bison Bold'), local('Bison-Bold'),
+    url('../fonts/Bison-Bold.woff2') format('woff2'),
+    url('../fonts/Bison-Bold.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: local('Futura-Bold'), url('../fonts/Futura-Bold.woff2') format('woff2'),
+    url('../fonts/Futura-Bold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
