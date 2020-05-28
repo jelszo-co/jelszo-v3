@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as ScrollMagic from 'scrollmagic';
 import { TweenMax, TimelineMax, Power1 } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
@@ -22,6 +22,19 @@ const Landing = () => {
       .setTween('#webpage', { left: '63%', ease: Power1.easeInOut })
       .addTo(controller);
   }, [controller]);
+
+  const scroller = useRef();
+  const handleScroll = () => {
+    const currentPos = window.pageYOffset;
+    if (currentPos > 300) {
+      try {
+        scroller.current.style.opacity = 0;
+      } catch (err) {}
+      window.removeEventListener('scroll', handleScroll);
+    }
+  };
+  window.addEventListener('scroll', handleScroll);
+
   return (
     <div id='landing'>
       <Logo />
@@ -49,11 +62,11 @@ const Landing = () => {
               és webfejlesztéssel foglalkozunk.
             </p>
           </div>
-          <div className='scroller'>
+          <div className='scroller' ref={scroller}>
             <span className='dot' />
           </div>
         </section>
-        <section style={{ border: '1px solid red' }}>
+        <section>
           <h1>
             Tudjuk
             <br />
