@@ -6,6 +6,7 @@ import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import Webpage from './components/Webpage';
 
 import { ReactComponent as Logo } from '../assets/jszc.svg';
+import { ReactComponent as Check } from '../assets/checkmark.svg';
 
 import '../scss/landing.scss';
 
@@ -66,13 +67,35 @@ const Landing = () => {
             <span className='dot' />
           </div>
         </section>
-        <section>
-          <h1>
-            Tudjuk
-            <br />
-            mit csinálunk.
-          </h1>
-          <p>REPLACE</p>
+        <section id='s-feat'>
+          <div className='content-wrapper'>
+            <h1>
+              Tudjuk
+              <br />
+              mit csinálunk.
+            </h1>
+            <p>És ezt be is bizonyítjuk.</p>
+            <ul>
+              <li>
+                <p>
+                  Egyedi Weboldalak
+                  <Check />
+                </p>
+              </li>
+              <li>
+                <p>
+                  Design tervek
+                  <Check />
+                </p>
+              </li>
+              <li>
+                <p>
+                  Nagyjából ok munka
+                  <Check />
+                </p>
+              </li>
+            </ul>
+          </div>
         </section>
         <section>
           <h1>
